@@ -1,10 +1,12 @@
 import React from "react";
-import { Input, Button } from 'antd';
+import { Input, Button, Row, Col } from 'antd';
+import { AppContainer } from "./App.styles";
 // import ArrowLeft from '@ant-design/icons';
 
 import logo from "./logo.svg";
 import About from './components/partials/about/About';
 import { API_URL, API_TOKEN, INITIAL_CITY } from "./components/utils/config";
+import 'antd/dist/antd.css';
 
 type Props = {};
 
@@ -24,18 +26,15 @@ const App: React.FC<Props> = () => {
   };
 
   return (
-    <div>
+    <AppContainer>
       <header>
         <img src={logo} className="App-logo" alt="logo" />
         <h1>Logo</h1>
       </header>
       <About />
-      <span>{API_URL}</span><br></br>
-      <span>{API_TOKEN}</span><br></br>
-      <span>{INITIAL_CITY}</span><br></br>
       <Input placeholder="Basic usage" />
       <Button onClick={fetchWeather}>Click me</Button>
-    </div>
+    </AppContainer>
   );
 }
 
