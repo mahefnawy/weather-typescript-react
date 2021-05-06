@@ -1,6 +1,6 @@
 import React from "react";
 import { Input, Button, Row, Col } from 'antd';
-import { AppContainer } from "./App.styles";
+import { AppContainer } from "./AppStyles";
 // import ArrowLeft from '@ant-design/icons';
 
 import logo from "./logo.svg";
